@@ -117,52 +117,38 @@ export default function Verification() {
         </div>
 
       </div>
-     {/* BUSINESS DOCUMENTS */}
+     {/* DOCUMENT ACCESS */}
 
-     <section className="mt-20">
+<section className="mt-20">
 
-     <h2 className="text-3xl font-semibold mb-10">
-     Business Documents
-     </h2>
+<h2 className="text-3xl font-semibold mb-10">
+Business Documentation
+</h2>
 
-     <p className="text-gray-300 mb-10 max-w-2xl">
-     Ocean Global Ventures provides required business documentation
-     to brand partners and authorized distributors upon request
-     during the wholesale onboarding process.
-     </p>
+<p className="text-gray-300 max-w-2xl mb-8">
+Official business documentation including resale certificates,
+tax forms, and verification materials are provided to brand
+partners during the wholesale onboarding process.
+</p>
 
-     <div className="grid md:grid-cols-3 gap-6">
+<div className="bg-gray-900 border border-gray-800 p-8 rounded-lg">
 
-     <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
-     <h3 className="text-yellow-500 font-semibold mb-2">
-     Resale Certificate
-     </h3>
-     <p className="text-sm text-gray-300">
-     Available for authorized brand partnerships.
-     </p>
-     </div>
+<p className="text-gray-300">
+If your brand requires verification documents prior to establishing
+a wholesale partnership, our team will provide the necessary
+documentation upon request.
+</p>
 
-     <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
-     <h3 className="text-yellow-500 font-semibold mb-2">
-     W-9 Tax Form
-     </h3>
-     <p className="text-sm text-gray-300">
-     Provided during wholesale account onboarding.
-     </p>
-     </div>
+<a
+href="/brand-kit"
+className="inline-block mt-6 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold"
+>
+Request Brand Partnership Kit
+</a>
 
-     <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
-     <h3 className="text-yellow-500 font-semibold mb-2">
-     Business Verification
-     </h3>
-     <p className="text-sm text-gray-300">
-LLC documentation available upon request.
-     </p>
-     </div>
+</div>
 
-     </div>
-
-     </section>
+</section>
      </main>
   )
 }
