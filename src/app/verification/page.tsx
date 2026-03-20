@@ -117,7 +117,52 @@ export default function Verification() {
         </div>
 
       </div>
+     {/* BUSINESS DOCUMENTS */}
 
-    </main>
+     <section className="mt-20">
+
+     <h2 className="text-3xl font-semibold mb-10">
+     Business Documents
+     </h2>
+
+     <p className="text-gray-300 mb-10 max-w-2xl">
+     Ocean Global Ventures provides required business documentation
+     to brand partners and authorized distributors upon request
+     during the wholesale onboarding process.
+     </p>
+
+     <div className="grid md:grid-cols-3 gap-6">
+
+     <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+     <h3 className="text-yellow-500 font-semibold mb-2">
+     Resale Certificate
+     </h3>
+     <p className="text-sm text-gray-300">
+     Available for authorized brand partnerships.
+     </p>
+     </div>
+
+     <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+     <h3 className="text-yellow-500 font-semibold mb-2">
+     W-9 Tax Form
+     </h3>
+     <p className="text-sm text-gray-300">
+     Provided during wholesale account onboarding.
+     </p>
+     </div>
+
+     <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+     <h3 className="text-yellow-500 font-semibold mb-2">
+     Business Verification
+     </h3>
+     <p className="text-sm text-gray-300">
+LLC documentation available upon request.
+     </p>
+     </div>
+
+     </div>
+
+     </section>
+     </main>
   )
 }

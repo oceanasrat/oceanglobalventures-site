@@ -16,7 +16,7 @@ export default function Navbar() {
           <Link href="/services">Services</Link>
           <Link href="/partners">Brand Partners</Link>
           <Link href="/contact">Contact</Link>
-
+          <Link href="/retail">Retail</Link>
         </div>
 
       </div>
