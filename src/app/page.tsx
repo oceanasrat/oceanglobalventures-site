@@ -1,65 +1,314 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="min-h-screen bg-black text-white">
+
+      {/* HERO SECTION */}
+
+      <section className="text-center py-32 px-6 max-w-5xl mx-auto">
+
+        <h1 className="text-5xl md:text-6xl font-bold mb-8 text-yellow-500">
+          Strategic Retail Partnership for Premium Brands
+        </h1>
+
+        <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          Ocean Global Ventures partners with leading brands to expand and
+          protect their presence across online marketplaces through
+          MAP-compliant distribution, optimized listings, and
+          data-driven advertising strategies.
+        </p>
+
+        <div className="mt-12 flex justify-center gap-6 flex-wrap">
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
+            className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg hover:bg-yellow-400 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Become a Brand Partner
           </a>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/services"
+            className="border border-yellow-500 text-yellow-500 px-8 py-4 rounded-lg hover:bg-yellow-500 hover:text-black transition"
           >
-            Documentation
+            Our Services
           </a>
+
         </div>
-      </main>
+
+      </section>
+
+      {/* TRUST SECTION */}
+
+      <section className="py-20 border-t border-gray-800">
+
+        <div className="max-w-6xl mx-auto text-center">
+
+          <h2 className="text-3xl font-semibold mb-12">
+            Trusted Marketplace Retail Partner
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-10 text-gray-300">
+
+            <div>
+              <h3 className="text-yellow-500 font-semibold mb-2">
+                Registered U.S. Business
+              </h3>
+              <p>Ocean Global Ventures LLC</p>
+            </div>
+
+            <div>
+              <h3 className="text-yellow-500 font-semibold mb-2">
+                MAP Policy Compliant
+              </h3>
+              <p>Protecting brand pricing integrity</p>
+            </div>
+
+            <div>
+              <h3 className="text-yellow-500 font-semibold mb-2">
+                Marketplace Optimization
+              </h3>
+              <p>Professional product representation</p>
+            </div>
+
+            <div>
+              <h3 className="text-yellow-500 font-semibold mb-2">
+                Authorized Retail Partnerships
+              </h3>
+              <p>Long-term brand relationships</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* SERVICES PREVIEW */}
+
+      <section className="py-24 border-t border-gray-800">
+
+        <div className="max-w-6xl mx-auto">
+
+          <h2 className="text-3xl text-center font-semibold mb-16">
+            Our Value to Brand Partners
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10">
+
+            <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+              <h3 className="text-yellow-500 text-xl font-semibold mb-4">
+                Marketplace Management
+              </h3>
+              <p className="text-gray-300">
+                Professional representation of your products across major
+                online marketplaces with consistent brand presentation.
+              </p>
+            </div>
+
+            <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+              <h3 className="text-yellow-500 text-xl font-semibold mb-4">
+                MAP Compliance
+              </h3>
+              <p className="text-gray-300">
+                Strict adherence to Minimum Advertised Price policies to
+                protect brand value and maintain marketplace stability.
+              </p>
+            </div>
+
+            <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+              <h3 className="text-yellow-500 text-xl font-semibold mb-4">
+                Advertising & Growth
+              </h3>
+              <p className="text-gray-300">
+                Data-driven advertising strategies that increase visibility,
+                improve conversion rates, and scale product sales.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+{/* PARTNERSHIP PROCESS */}
+
+<section className="py-24 border-t border-gray-800">
+
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-3xl text-center font-semibold mb-16">
+      Our Brand Partnership Process
+    </h2>
+
+    <div className="grid md:grid-cols-4 gap-10 text-center">
+
+      <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold text-lg mb-3">
+          1. Brand Onboarding
+        </h3>
+        <p className="text-gray-300">
+          We establish a wholesale partnership and align with your brand
+          guidelines and distribution policies.
+        </p>
+      </div>
+
+      <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold text-lg mb-3">
+          2. Listing Optimization
+        </h3>
+        <p className="text-gray-300">
+          Product listings are optimized for visibility, accuracy, and
+          consistent brand presentation.
+        </p>
+      </div>
+
+      <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold text-lg mb-3">
+          3. MAP Protection
+        </h3>
+        <p className="text-gray-300">
+          We operate with strict adherence to brand MAP policies to
+          maintain pricing integrity across marketplaces.
+        </p>
+      </div>
+
+      <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold text-lg mb-3">
+          4. Growth & Advertising
+        </h3>
+        <p className="text-gray-300">
+          Strategic advertising and marketplace optimization help scale
+          product visibility and sales performance.
+        </p>
+      </div>
+
     </div>
-  );
+
+  </div>
+
+ </section>
+ {/* BRAND PROTECTION SECTION */}
+
+<section className="py-24 border-t border-gray-800 bg-black">
+
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center px-6">
+
+    <div>
+
+      <h2 className="text-4xl font-semibold mb-6">
+        Protecting Brand Integrity in Online Marketplaces
+      </h2>
+
+      <p className="text-gray-300 mb-6 leading-relaxed">
+        Ocean Global Ventures operates with a strict commitment to
+        protecting the reputation and pricing integrity of our brand
+        partners across online marketplaces.
+      </p>
+
+      <p className="text-gray-300 leading-relaxed">
+        Our operational approach prioritizes responsible distribution,
+        adherence to MAP policies, and professional marketplace
+        representation that aligns with each brand’s long-term retail
+        strategy.
+      </p>
+
+      <div className="mt-8">
+
+        <a
+          href="/contact"
+          className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition"
+        >
+          Request Retail Partnership
+        </a>
+
+      </div>
+
+    </div>
+
+    <div className="grid gap-6">
+
+      <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold mb-2">
+          MAP Policy Compliance
+        </h3>
+        <p className="text-gray-300 text-sm">
+          We strictly follow brand MAP policies to maintain stable
+          marketplace pricing and protect brand equity.
+        </p>
+      </div>
+
+      <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold mb-2">
+          Professional Listing Management
+        </h3>
+        <p className="text-gray-300 text-sm">
+          Listings are optimized to ensure accurate product
+          representation and consistent brand presentation.
+        </p>
+      </div>
+
+      <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+        <h3 className="text-yellow-500 font-semibold mb-2">
+          Responsible Distribution
+        </h3>
+        <p className="text-gray-300 text-sm">
+          Our partnerships focus on long-term brand growth rather than
+          short-term price competition.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+ </section>
+ {/* MARKETPLACE PLATFORMS */}
+
+<section className="py-24 border-t border-gray-800 bg-black">
+
+  <div className="max-w-6xl mx-auto text-center px-6">
+
+    <h2 className="text-3xl font-semibold mb-6">
+      Multi-Channel Marketplace Distribution
+    </h2>
+
+    <p className="text-gray-400 max-w-2xl mx-auto mb-16">
+      Ocean Global Ventures helps brands expand across the world's largest
+      online marketplaces while maintaining consistent pricing, brand
+      integrity, and professional product representation.
+    </p>
+
+    <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
+
+      <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+        Amazon
+      </div>
+
+      <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+        Walmart
+      </div>
+
+      <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+        eBay
+      </div>
+
+      <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+        Target
+      </div>
+
+      <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+        TikTok Shop
+      </div>
+
+      <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+        Shopify
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    </main>
+  )
 }
