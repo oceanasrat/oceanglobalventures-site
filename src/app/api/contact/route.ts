@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import nodemailer from "nodemailer"
 
 export async function POST(req: Request) {
@@ -91,5 +92,24 @@ export async function POST(req: Request) {
     console.error("EMAIL ERROR:", error)
 
     return new Response(JSON.stringify({ error: "Email failed" }), { status: 500 })
+=======
+import { NextResponse } from "next/server"
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json()
+
+    console.log("New partnership request:", body)
+
+    return NextResponse.json({
+      success: true,
+      message: "Inquiry received",
+    })
+  } catch (error) {
+    return NextResponse.json(
+      { success: false, message: "Server error" },
+      { status: 500 }
+    )
+>>>>>>> 4fc3eb55ac395e85ce6d8f7f61f08dc1b3e942a5
   }
 }
