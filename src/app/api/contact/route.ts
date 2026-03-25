@@ -10,9 +10,9 @@ export async function POST(req: Request) {
     port: 465,
     secure: true,
     auth: {
-      user: "procurement@oceanglobalventuresllc.com",
-      pass: "qfur xjiq sviy avon"
-    }
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
   })
 
   try {
