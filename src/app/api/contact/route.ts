@@ -1,21 +1,21 @@
-<<<<<<< HEAD
 import nodemailer from "nodemailer"
+import { NextResponse } from "next/server"
 
 export async function POST(req: Request) {
-
-  const data = await req.json()
-
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-  })
-
   try {
+    const data = await req.json()
+
+    console.log("New partnership request:", data)
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    })
 
     // ✅ EMAIL TO YOU (INTERNAL)
     await transporter.sendMail({
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
           <p><strong>Message:</strong></p>
           <p>${data.message}</p>
         </div>
-      `
+      `,
     })
 
     // ✅ AUTO-REPLY TO BRAND
@@ -46,7 +46,6 @@ export async function POST(req: Request) {
       from: `"Ocean Global Ventures" <procurement@oceanglobalventuresllc.com>`,
       to: data.email,
       subject: "Partnership Inquiry Received – Ocean Global Ventures",
-
       html: `
         <div style="font-family: Arial; padding:30px; background:#0a0a0a; color:white;">
 
@@ -83,33 +82,19 @@ export async function POST(req: Request) {
           </p>
 
         </div>
-      `
+      `,
     })
 
-    return new Response(JSON.stringify({ success: true }), { status: 200 })
-
+    return NextResponse.json(
+      { success: true, message: "Inquiry received" },
+      { status: 200 }
+    )
   } catch (error) {
     console.error("EMAIL ERROR:", error)
 
-    return new Response(JSON.stringify({ error: "Email failed" }), { status: 500 })
-=======
-import { NextResponse } from "next/server"
-
-export async function POST(req: Request) {
-  try {
-    const body = await req.json()
-
-    console.log("New partnership request:", body)
-
-    return NextResponse.json({
-      success: true,
-      message: "Inquiry received",
-    })
-  } catch (error) {
     return NextResponse.json(
       { success: false, message: "Server error" },
       { status: 500 }
     )
->>>>>>> 4fc3eb55ac395e85ce6d8f7f61f08dc1b3e942a5
   }
 }
